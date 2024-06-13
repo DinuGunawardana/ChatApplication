@@ -1,9 +1,18 @@
-import { FlatList } from 'react-native';
-import chats from '../../assets/data/chats.json'
-import ChatListItem from "../components/ChatListItem";
+import { Text, ImageBackground, StyleSheet } from "react-native";
+import bg from "../../assets/images/BG.png";
 
-const ChatsScreen = () => {
-  return <FlatList data={chats} renderItem={({ item }) => <ChatListItem chat={item} />} />;
+const ChatScreen = () => {
+  return (
+    <ImageBackground source={bg} style={styles.bg}>
+      <Text>ChatScreen</Text>
+    </ImageBackground>
+  );
 };
 
-export default ChatsScreen;
+const styles = StyleSheet.create({
+  bg: {
+    flex: 1,
+  },
+});
+
+export default ChatScreen;
