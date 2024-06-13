@@ -1,10 +1,18 @@
-import { Text, ImageBackground, StyleSheet } from "react-native";
-import bg from "../../assets/images/BG.png";
+import { View, Text, ImageBackground, StyleSheet, FlatList } from 'react-native';
+import Message from '../components/Messages';
+
+import bg from '../../assets/images/BG.png';
+import messages from '../../assets/data/messages.json';
 
 const ChatScreen = () => {
   return (
     <ImageBackground source={bg} style={styles.bg}>
-      <Text>ChatScreen</Text>
+      <FlatList
+        data={messages}
+        renderItem={({ item }) => <Message message={item} />}
+        style={styles.list}
+        inverted
+      />
     </ImageBackground>
   );
 };
@@ -12,6 +20,9 @@ const ChatScreen = () => {
 const styles = StyleSheet.create({
   bg: {
     flex: 1,
+  },
+  list: {
+    padding: 10,
   },
 });
 

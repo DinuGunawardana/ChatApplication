@@ -1,8 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 // 👇 Import our component
-import ChatListItem from "./src/components/ChatListItem";
-import ChatsScreen from "./src/screens/ChatsScreen";
 import ChatScreen from './src/screens/ChatScreen';
 
 const chat = {
